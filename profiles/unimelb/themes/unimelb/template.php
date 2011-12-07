@@ -10,14 +10,14 @@ drupal_add_css('http://brand.unimelb.edu.au/web-templates/1-2-0beta1/css/complet
 drupal_add_js('http://brand.unimelb.edu.au/global-header/js/injection.js', 'external');
 
 /**
- * can be local: /drupal/ or remote: http://brand.unimelb.edu.au/drupal/
+ * can be local: /drupal/1-0-beta1/ or remote: http://brand.unimelb.edu.au/drupal/1-0-beta1/
  */
 
-drupal_add_css('/drupal/7.x-1.0-beta1/css/unimelb_drupal_distro.css', array('group' => CSS_THEME, 'type' => 'external'));
-drupal_add_js('/drupal/7.x-1.0-beta1/js/unimelb_drupal_distro.js', 'external');
-drupal_add_js('/drupal/7.x-1.0-beta1/js/navigation.js', 'external');
-drupal_add_js('/drupal/7.x-1.0-beta1/js/newsbanner.js', 'external');
-drupal_add_js('/drupal/7.x-1.0-beta1/js/widgets.js', 'external');
+drupal_add_css('/drupal/1-0-beta1/css/unimelb_drupal_distro.css', array('group' => CSS_THEME, 'type' => 'external'));
+drupal_add_js('/drupal/1-0-beta1/js/unimelb_drupal_distro.js', 'external');
+drupal_add_js('/drupal/1-0-beta1/js/navigation.js', 'external');
+drupal_add_js('/drupal/1-0-beta1/js/newsbanner.js', 'external');
+drupal_add_js('/drupal/1-0-beta1/js/widgets.js', 'external');
 
 /**
  * Make some Unimelb Settings variables available to js
