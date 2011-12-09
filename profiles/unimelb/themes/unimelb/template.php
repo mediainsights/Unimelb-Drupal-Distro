@@ -3,24 +3,24 @@
 // thanks to Aaron Tan and team at the Faculty of Architecture, Building and Planning, University of Melbourne, and Paul Tagell and team at Marketing and Communications, University of Melbourne - Media Insights 2011
 
 /**
- * remote
+ * importing remote resources
  */
 
 drupal_add_css('http://brand.unimelb.edu.au/web-templates/1-2-0beta1/css/complete.css', array('group' => CSS_THEME, 'type' => 'external'));
 drupal_add_js('http://brand.unimelb.edu.au/global-header/js/injection.js', 'external');
 
 /**
- * can be local: /drupal/1-0-beta1/ or remote: http://brand.unimelb.edu.au/drupal/1-0-beta1/
+ * these can be remote: http://brand.unimelb.edu.au/drupal/1-0-beta1/ or local: /drupal/1-0-beta1/
  */
 
-drupal_add_css('/drupal/1-0-beta1/css/unimelb_drupal_distro.css', array('group' => CSS_THEME, 'type' => 'external'));
-drupal_add_js('/drupal/1-0-beta1/js/unimelb_drupal_distro.js', 'external');
-drupal_add_js('/drupal/1-0-beta1/js/navigation.js', 'external');
-drupal_add_js('/drupal/1-0-beta1/js/newsbanner.js', 'external');
-drupal_add_js('/drupal/1-0-beta1/js/widgets.js', 'external');
+drupal_add_css('http://brand.unimelb.edu.au/drupal/1-0-beta1/css/unimelb_drupal_distro.css', array('group' => CSS_THEME, 'type' => 'external'));
+drupal_add_js('http://brand.unimelb.edu.au/drupal/1-0-beta1/js/unimelb_drupal_distro.js', 'external');
+drupal_add_js('http://brand.unimelb.edu.au/drupal/1-0-beta1/js/navigation.js', 'external');
+drupal_add_js('http://brand.unimelb.edu.au/drupal/1-0-beta1/js/newsbanner.js', 'external');
+drupal_add_js('http://brand.unimelb.edu.au/drupal/1-0-beta1/js/widgets.js', 'external');
 
 /**
- * Make some Unimelb Settings variables available to js
+ * making Unimelb Settings variables available to js
  */
 
 if(variable_get('unimelb_settings_site-name-short') && variable_get('unimelb_settings_site-name-short', '') != ''){
