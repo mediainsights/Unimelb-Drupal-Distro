@@ -157,9 +157,9 @@
  * @code
  *   $databases['default']['default'] = array(
  *     'driver' => 'mysql',
- *     'database' => 'databasename',
- *     'username' => 'username',
- *     'password' => 'password',
+ *     'database' => 'DBNAME-DEV',
+ *     'username' => 'USER',
+ *     'password' => 'PASS',
  *     'host' => 'localhost',
  *     'prefix' => '',
  *   );
@@ -182,9 +182,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'DATABASE',
-      'username' => 'USERNAME',
-      'password' => 'PASSWORD',
+      'database' => 'DBNAME-DEV',
+      'username' => 'USER',
+      'password' => 'PASS',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
