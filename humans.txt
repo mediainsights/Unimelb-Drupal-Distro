@@ -3,7 +3,9 @@ This file is designed to let interested parties know who designed and developed 
 /* Local Site */
 
 	Designer: 
+
 	Developer: 
+
 	Content Producers: 
 		
 /* Web Templates */
@@ -14,9 +16,9 @@ More information can be found at http://brand.unimelb.edu.au.
 
 Templates designed and developed by:
 
-  Anthony Kolber (@kolber)
-  Toby Hede (@tobyhede)
-  Paul Tagell (@tagell).
+	Anthony Kolber (@kolber)
+	Toby Hede (@tobyhede)
+	Paul Tagell (@tagell).
 
 Iconography under licence from helveticons.ch
 
@@ -28,3 +30,7 @@ Unimelb Drupal Distro developed by:
   Luke Hodge - luke@insights.net.au
   Kelvin Wong - kelvin@insights.net.au
   Joshua Martin - josh@insights.net.au
+
+
+
+

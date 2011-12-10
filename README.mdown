@@ -1,0 +1,18 @@
+Unimelb Drupal Distro
+============================================
+
+This is a pre-developed Drupal web site which uses the University of Melbourne Web Templates 
+
+License
+======================
+
+GNU GENERAL PUBLIC LICENSE
+Version 2, June 1991
+
+
+Release Notes 
+======================
+
+#7.x-1.0-beta1
+
+- The Unimelb Drupal Distro is a pre-developed Drupal web site which uses the University of Melbourne Web Templates 
