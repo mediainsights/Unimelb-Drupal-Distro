@@ -34,4 +34,4 @@ Release Notes
 
 #7.x-1.0-beta1
 
-- pre-developed Drupal web site
+- pre-developed Drupal web site 

@@ -201,12 +201,6 @@ function googleanalytics_admin_settings_form($form_state) {
     '#description' => t('A file extension list separated by the | character that will be tracked as download when clicked. Regular expressions are supported. For example: !extensions', array('!extensions' => GOOGLEANALYTICS_TRACKFILES_EXTENSIONS)),
     '#maxlength' => 255,
   );
-  $form['tracking']['linktracking']['googleanalytics_trackoutboundaspageview'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Track clicks on outbound links as page views'),
-    '#default_value' => variable_get('googleanalytics_trackoutboundaspageview', 0),
-    '#description' => t('By default outbound links are tracked as <em>Events</em>. In rare situations like tracking of <em>Goals</em> it may be required to track outbound clicks as page views.'),
-  );
 
   // Google already have many translations, if not - they display a note to change the language.
   global $language;
@@ -376,6 +370,14 @@ function googleanalytics_admin_settings_form($form_state) {
       '#default_value' => variable_get('googleanalytics_translation_set', 0),
     );
   }
+
+  // Allow tracking of page load times.
+  $form['advanced']['googleanalytics_trackpageloadtime'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Site Speed reporting'),
+    '#default_value' => variable_get('googleanalytics_trackpageloadtime', 0),
+    '#description' => t('The Site Speed report measures the page load time (latency) for a sample of pageviews on your website pages. For more information see <a href="@url">Site Speed</a> page.', array('@url' => 'https://www.google.com/support/analyticshelp/bin/answer.py?answer=1205784'))
+  );
 
   $form['advanced']['codesnippet'] = array(
     '#type' => 'fieldset',

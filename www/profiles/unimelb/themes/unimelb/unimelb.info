@@ -1,5 +1,5 @@
 name = Unimelb
-description = The Unimelb theme is part of the Unimelb Drupal Distro which delivers the University of Melbourne Web Templates and requires the Unimelb Setup and Unimelb Settings modules.
+description = The Unimelb Theme is part of the Unimelb Drupal Distro which delivers the University of Melbourne Web Templates and requires the Unimelb Settings module.
 package = Core
 core = 7.x
 engine = phptemplate

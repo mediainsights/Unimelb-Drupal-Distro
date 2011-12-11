@@ -113,9 +113,6 @@ function googleanalytics_page_alter(&$page) {
       $link_settings['trackDownload'] = $track_download;
       $link_settings['trackDownloadExtensions'] = $trackfiles_extensions;
     }
-    if ($track_outbound_as_pageview = variable_get('googleanalytics_trackoutboundaspageview', 0)) {
-      $link_settings['trackOutboundAsPageview'] = $track_outbound_as_pageview;
-    }
     if ($track_domain_mode = variable_get('googleanalytics_domain_mode', 0)) {
       $link_settings['trackDomainMode'] = $track_domain_mode;
     }
@@ -161,7 +158,7 @@ function googleanalytics_page_alter(&$page) {
       // Check we have a node object, it supports translation, and its
       // translated node ID (tnid) doesn't match its own node ID.
       $node = menu_get_object();
-      if ($node && translation_supported_type($node->type) && isset($node->tnid) && ($node->tnid != $node->nid)) {
+      if ($node && translation_supported_type($node->type) && !empty($node->tnid) && ($node->tnid != $node->nid)) {
         $source_node = node_load($node->tnid);
         $languages = language_list();
         $url_custom = drupal_json_encode(url('node/' . $source_node->nid, array('language' => $languages[$source_node->language])));
@@ -190,8 +187,12 @@ function googleanalytics_page_alter(&$page) {
         $custom_var_value = !empty($googleanalytics_custom_vars['slots'][$i]['value']) ? $googleanalytics_custom_vars['slots'][$i]['value'] : '';
         $custom_var_scope = !empty($googleanalytics_custom_vars['slots'][$i]['scope']) ? $googleanalytics_custom_vars['slots'][$i]['scope'] : 3;
 
+        $types = array();
         $node = menu_get_object();
-        $custom_var_value = token_replace($custom_var_value, array('node' => $node), array('clear' => TRUE));
+        if (is_object($node)) {
+          $types += array('node' => $node);
+        }
+        $custom_var_value = token_replace($custom_var_value, $types, array('clear' => TRUE));
 
         // Suppress empty custom variables.
         if (!is_numeric($custom_var_value) && empty($custom_var_value)) {
@@ -253,6 +254,11 @@ function googleanalytics_page_alter(&$page) {
     else {
       $script .= '_gaq.push(["_trackPageview", ' . $url_custom . ']);';
     }
+
+    if (variable_get('googleanalytics_trackpageloadtime', 0)) {
+      $script .= '_gaq.push(["_trackPageLoadTime"]);';
+    }
+
     if (!empty($codesnippet_after)) {
       $script .= $codesnippet_after;
     }
