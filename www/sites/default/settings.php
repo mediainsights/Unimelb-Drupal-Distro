@@ -157,7 +157,7 @@
  * @code
  *   $databases['default']['default'] = array(
  *     'driver' => 'mysql',
- *     'database' => 'DBNAME-DEV',
+ *     'database' => 'DBNAME',
  *     'username' => 'USER',
  *     'password' => 'PASS',
  *     'host' => 'localhost',
@@ -182,7 +182,7 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'DBNAME-DEV',
+      'database' => 'DBNAME',
       'username' => 'USER',
       'password' => 'PASS',
       'host' => 'localhost',

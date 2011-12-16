@@ -80,28 +80,41 @@
 
 print render($title_prefix);
 
+// if(!$page && $title) {
+
 print '<h2 ' . $title_attributes . '>';
 
-if(!$page) { 
-	print '<a href="' . $node_url . '">'; 
-}
+if(!$page) { print '<a href="' . $node_url . '">'; }
 
 print $title;
 
-if(!$page) { 
-	print '</a>'; 
-}
+if(!$page) { print '</a>'; }
 
 print '</h2>';
+
+// }
 
 print render($title_suffix); 
 
 hide($content['comments']);
 hide($content['links']);
+hide($content['field_above']); 
+hide($content['field_aside']);
+hide($content['field_display_settings']);
+hide($content['field_hide_images']);
+hide($content['field_related_events']); 
+
+$hide_images = field_get_items('node', $node, 'field_hide_images');
+$hide_images_value = field_view_value('node', $node, 'field_hide_images', $hide_images[0], array());
+
+if(render($hide_images_value) == 'Yes') {
+	hide($content['field_images']); 
+}
 
 print render($content);
 
 print render($content['links']);
+
 print render($content['comments']); 
 
 ?>
