@@ -74,13 +74,13 @@ $site_name = variable_get('site_name', '');
 <!-- End SEO relevant meta data -->
 
 <!-- Authoriser and maintainer related meta data - developers, don't forget humans.txt -->
-	<meta name="DC.Creator" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name') . ', '; } if(variable_get('unimelb_settings_maint-pos')) { print variable_get('unimelb_settings_maint-pos') . ', '; } print $site_name; ?>">
-	<meta name="DC.Contributor" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name') . ', '; } if(variable_get('unimelb_settings_maint-pos')) { print variable_get('unimelb_settings_maint-pos') . ', '; }  print $site_name; ?>">
-	<meta name="author" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name') . ', '; } if(variable_get('unimelb_settings_maint-pos')) { print variable_get('unimelb_settings_maint-pos') . ', '; }  print $site_name; ?>">
+	<meta name="DC.Creator" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name') . ', '; } print $site_name; ?>">
+	<meta name="DC.Contributor" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name') . ', '; }  print $site_name; ?>">
+	<meta name="author" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name') . ', '; }  print $site_name; ?>">
 	<meta name="UM.Authoriser.Name" content="<?php if(variable_get('unimelb_settings_auth-name')) { print variable_get('unimelb_settings_auth-name'); } ?>">
-	<meta name="UM.Authoriser.Title" content="<?php if(variable_get('unimelb_settings_auth-pos')) { print variable_get('unimelb_settings_auth-pos'); } ?>">
+	<meta name="UM.Authoriser.Title" content="<?php if(variable_get('unimelb_settings_auth-name')) { print variable_get('unimelb_settings_auth-name'); } ?>">
 	<meta name="UM.Maintainer.Name" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name'); } ?>">
-	<meta name="UM.Maintainer.Department" content="<?php if(variable_get('unimelb_settings_maint-pos')) { print variable_get('unimelb_settings_maint-pos'); } ?>">
+	<meta name="UM.Maintainer.Department" content="<?php if(variable_get('unimelb_settings_maint-name')) { print variable_get('unimelb_settings_maint-name'); } ?>">
 	<meta name="UM.Maintainer.Email" content="<?php if(variable_get('unimelb_settings_ad-email')) { print variable_get('unimelb_settings_ad-email'); } ?>">
 <!-- End authoriser and maintainer meta data -->
 
