@@ -5,5 +5,4 @@ thanks to Aaron Tan and team at the Faculty of Architecture, Building and Planni
 Instructions:
 (1) create a database and import unimelb_drupal_distro.sql
 (2) edit /sites/default/settings.php and set the DBNAME, USER, PASS
-(3) delete the _DEPLOY directory
-(4) contact Media Insights for further support - media@insights.net.au
+(3) contact Media Insights for further support - media@insights.net.au
